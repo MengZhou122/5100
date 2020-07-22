@@ -1,13 +1,49 @@
+/* to make background white*/
 #borderPane{
     -fx-background-color: white;
 }
 
+/*header section*/
+.header-section {
+    -fx-background-color: teal;
+}
 
+.header-section Label {
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10px;
 
+}
 
+#commercialText1{
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Helvetica";
+}
 
+#commercialText2{
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-family: "Helvetica";
+}
+
+/*left section*/
+.left-section {
+    -fx-min-width: 400px;
+    -fx-pref-width: 400px;
+    -fx-max-width: 400px;
+    -fx-border-width: 1;
+    -fx-border-color: transparent #E8E8E8 transparent transparent;
+}
+
+#supportedFormat{
+    -fx-font-size: 15px;
+    -fx-text-fill: green;
+}
+
+/* Buttons and Boxes in left section*/
 #uploadBtn{
-    -fx-background-color:orange;
+    -fx-background-color:#3bb1cb;
     -fx-font-weight: 700;
     -fx-background-radius: 9,8,5,4,3;
     -fx-font-family: "Helvetica";
@@ -17,7 +53,7 @@
 }
 
 #convertBtn{
-     -fx-background-color:green;
+     -fx-background-color:#e35259;
      -fx-font-weight: 700;
      -fx-background-radius: 9,8,5,4,3;
      -fx-font-family: "Helvetica";
@@ -27,7 +63,7 @@
 }
 
 #choiceBox{
-     -fx-background-color:#BF3F3F;
+     -fx-background-color:#94cba4;
      -fx-font-weight: 700;
      -fx-background-radius: 9,8,5,4,3;
      -fx-font-family: "Helvetica";
@@ -36,75 +72,72 @@
       -fx-text-fill: white;
 }
 
+#textWidth,
+#textHeight{
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+#textWidth:focused,
+#textHeight:focused {
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+
+#checkBoxedge{
+-fx-background-color: white;
+-fx-border-color:grey;
+-fx-border-radius:3px;
+
+}
+
+#blurEffect,
+#edgeEffect,
+#flipEffect{
+    /* default properties */
+    selected-box-color: #e35259;
+    box-color: #94cba4;
+    mark-color: white;
+}
+
+#blurEffect:selected > .box,
+#edgeEffect:selected > .box,
+#flipEffect:selected > .box{
+    /* background color for selected checkbox */
+    -fx-background-color: selected-box-color;
+}
+
+#blurEffect > .box,
+#edgeEffect > .box,
+#flipEffect > .box{
+    /* background color of unselected checkbox */
+    -fx-background-color: box-color;
+}
+
+#blurEffect:selected > .box > .mark,
+#blurEffect:indeterminate  > .box > .mark,
+#edgeEffect:selected > .box > .mark,
+#edgeEffect:indeterminate  > .box > .mark,
+#flipEffect:selected > .box > .mark,
+#flipEffect:indeterminate  > .box > .mark
+ {
+    /* modify mark color */
+    -fx-background-color: mark-color;
+}
+
+
+
 #chooseFormat,
-#chooseSize{
+#chooseSize,
+#blurEffect,
+#edgeEffect,
+#flipEffect{
     -fx-font-size: 15px;
     -fx-text-fill: green;
 }
 
-#errDisplay{
-    -fx-font-size: 15px;
-    -fx-text-fill: red;
-}
-
-#supportedFormat{
-    -fx-font-size: 15px;
-    -fx-text-fill: green;
-}
-
-#imageWith,
-#imageHeight,
-#imageDate,
-#imageGPS,
-#imageCamera,
-#imageManu{
-     -fx-font-size: 15px;
-     -fx-text-fill: green;
-}
-
-#successfulNotice{
-    -fx-font-size: 20px;
-    -fx-text-fill: red;
-    -fx-font-family: "Helvetica";
-    -fx-font-weight: bold;
-}
-
-
-
-
-
-.root {
-    -fx-font-size: 14px;
-    -fx-font-family: sans-serif;
-    -fx-background-color: #ffffff;
-}
-
-.header-section {
-    -fx-background-color: teal;
-}
-
-.header-section Label {
-    -fx-text-fill: #ffffff;
-    -fx-padding: 10px;
-}
-
-#account {
-    -fx-background-color: transparent;
-    -fx-text-fill: #ffffff;
-    -fx-font-size: 16px;
-    -fx-cursor: hand;
-}
-
-.sidebar-section {
-
-    -fx-min-width: 400px;
-    -fx-pref-width: 400px;
-    -fx-max-width: 400px;
-    -fx-border-width: 1;
-    -fx-border-color: transparent #E8E8E8 transparent transparent;
-}
-
-
+/* center section*/
 #taskCompleted{
     -fx-font-size: 20px;
     -fx-text-fill: red;
@@ -122,13 +155,24 @@
     -fx-font-size: 18px;
     -fx-padding: 0 0 10 0;
     -fx-font-weight: 700;
+    -fx-text-fill: green;
+
 }
 
-#content {
-    -fx-wrap-text: true;
-    -fx-font-size: 16px;
+/*text display in center section*/
+#errDisplay{
+    -fx-font-size: 15px;
+    -fx-text-fill: red;
 }
 
+#successfulNotice{
+    -fx-font-size: 20px;
+    -fx-text-fill: red;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+}
+
+/*footer section*/
 #footer-section {
     -fx-alignment: center;
     -fx-padding: 10 10 10 10;
