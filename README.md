@@ -1,4 +1,4 @@
-Final project for INFO5100(Data Management and Database Design)
+# Final project for INFO5100(Application Engineering & Development)
 
 An Desktop GUI developed with Java and JavaFX.
 
